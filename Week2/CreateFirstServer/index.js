@@ -1,38 +1,34 @@
 const express = require("express")
 const app = express()
 
-const foods = [
-    {name: "Pizza", score: 95},
-    {name: "Nachos", score: 100},
-    {name: "Salad", score: 75}
+const drinks = [
+    {name: "Coca Cola"},
+    {name: "Water"},
+    {name: "White wine"}
 ]
 
-const cities = [
-    {name: "Paris, France"},
-    {name: "Venice, Italy"},
-    {name: "Nairobi, Kenya"},
-    {name: "Dallas, Texas"}
+const endpoints = [
+    {endpoint1: "fruits"},
+    {endpoint2: "vegetables"},
+    {endpoint3: "drinks"}
 ]
 
-const people = [
-    {name: "Malik", age: 34},
-    {name: "Diane", age: 67},
-    {name: "Jackie", age: 26},
-    {name: "Bill", age: 51}
-]
-
-app.get("/foods", (req, res) => {
-    res.send(foods)
+app.get("/fruits", (req, res) => {
+    res.send("Oranges, Bananas, Apples")
 })
 
-app.get("/cities", (req, res) => {
-    res.send(cities)
+app.get("/vegetables", (req, res) => {
+    res.send("Spinach, Potatoes, Carrots")
 })
 
-app.get("/people", (req, res) => {
-    res.send(people)
+app.get("/drinks", (req, res) => {
+    res.send(drinks)
 })
 
-app.listen(5050, () => {
-    console.log("Port 5050 is working just fine!")
+app.get("/", (req, res) => {
+    res.send(endpoints)
+})
+
+app.listen(4080, () => {
+    console.log("The server is working at port 4080.")
 })
