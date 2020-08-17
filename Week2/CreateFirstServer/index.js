@@ -18,7 +18,7 @@ app.get("/fruits", (req, res) => {
 })
 
 app.get("/vegetables", (req, res) => {
-    res.send("Spinach, Potatoes, Carrots")
+    res.send("abc")
 })
 
 app.get("/drinks", (req, res) => {
@@ -28,6 +28,7 @@ app.get("/drinks", (req, res) => {
 app.get("/", (req, res) => {
     res.send(endpoints)
 })
+
 
 app.listen(4080, () => {
     console.log("The server is working at port 4080.")
