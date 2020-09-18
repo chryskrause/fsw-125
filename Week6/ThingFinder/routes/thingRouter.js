@@ -31,7 +31,7 @@ thingRouter.get("/:thingId", (req, res, next) => {
         const error = new Error(`The item with id ${thingId} was not found`)
         return next(error)
     }
-    res.status(200).send(foundMovie)
+    res.status(200).send(foundThing)
 })
 
 //Get by type

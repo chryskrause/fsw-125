@@ -49,12 +49,12 @@ return(
                 />
             {
                 bounties.map (bounty => 
-                <Bounty 
-                    {...bounty}
-                    key={bounty.firstName}
-                    deleteBounty = {deleteBounty}
-                    editBounty = {editBounty}
-                    />)}
+            <Bounty 
+                {...bounty}
+                key={bounty.firstName}
+                deleteBounty = {deleteBounty}
+                editBounty = {editBounty}
+                />)}
         </div>
     </div>
 )}
